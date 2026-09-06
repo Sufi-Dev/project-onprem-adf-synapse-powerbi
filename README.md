@@ -6,9 +6,9 @@
 
 ### Project Overview
 
-This project demonstrates the development of an **end to end Azure data engineering and analytics solution** using the Microsoft AdventureWorks dataset.
+This project demonstrates the development of an end to end Azure data engineering and analytics solution using the Microsoft AdventureWorks dataset.
 
-The objective was to build a modern data platform that extracts transactional data from an on premises SQL Server environment, processes and transforms it through a **Medallion Architecture**, and delivers curated business data for analytics and reporting in **Power BI**.
+The objective was to build a modern data platform that extracts transactional data from an on premises SQL Server environment, processes and transforms it through a Medallion Architecture, and delivers curated business data for analytics and reporting in Power BI.
 
 The solution uses:
 
@@ -18,8 +18,8 @@ The solution uses:
 * **Azure Synapse Analytics**
 * **Power BI**
 * **Microsoft Entra ID**
-* **Azure Key Vault**
-The final output is an interactive **Sales Overview Dashboard**, providing visibility into sales performance, product information, customer demographics, and product categories.
+* **Azure Key Vault**<br>
+The final output is an interactive Sales Overview Dashboard, providing visibility into sales performance, product information, customer demographics, and product categories.
 
 ### Business Requirements
 The business requires a centralized analytics solution capable of transforming operational sales data into meaningful and accessible business insights.
@@ -30,8 +30,8 @@ The solution is designed to:
 3. Clean, standardize, and validate data before analytical use.
 4. Create curated datasets containing business ready sales and customer information.
 5. Provide analytical access to transformed data.
-6. Deliver an interactive Power BI dashboard displaying key metrics including **total sales, number of products, customer distribution, and product categories**.
-7. Enable users to dynamically explore the data by **customer title, gender, and product category**.
+6. Deliver an interactive Power BI dashboard displaying key metrics including total sales, number of products, customer distribution, and product categories.
+7. Enable users to dynamically explore the data by customer title, gender, and product category.
 8. Secure credentials and platform access using centralized identity and secrets management.
 
 ### Architecture Overview
@@ -51,7 +51,7 @@ The solution follows a layered Azure data architecture:
 **Azure Key Vault** securely manages credentials, secrets, and keys used across the platform.</br>
 
 ## Dataset: Microsoft AdventureWorks
-This project uses the **Microsoft AdventureWorks** sample database, which represents a fictional bicycle manufacturing and retail organization.
+This project uses the Microsoft AdventureWorks sample database, which represents a fictional bicycle manufacturing and retail organization.
 
 AdventureWorks contains interconnected business entities covering:
 
@@ -81,5 +81,5 @@ PySpark is used to clean and standardize the data by handling null values, remov
 **Gold Layer**<br>
 Spark SQL is used to join cleaned datasets and create analytics ready fact and dimension tables such as fact_sales, fact_orders, dim_customer, dim_product, dim_seller, and dim_date.
 
-The final Gold layer is optimized for reporting and analysis in Azure Synapse Analytics and Power BI.
+The final Gold layer is optimized for reporting and analysis in Azure Synapse Analytics and Power BI.<br>
 ![Power BI Dashboard](./assets/dashboard.gif)
