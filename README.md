@@ -66,27 +66,20 @@ AdventureWorks contains interconnected business entities covering:
 * Purchasing
 * Inventory
 
-Its relational structure makes it suitable for demonstrating realistic **data engineering, ETL, Medallion Architecture, analytics, and BI workflows**.
-
-**Dataset Reference**
-
-[Microsoft AdventureWorks Sample Database](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure)
-
-[Microsoft SQL Server Samples GitHub Repository](https://github.com/microsoft/sql-server-samples)
+Its relational structure makes it suitable for demonstrating realistic data engineering, ETL, Medallion Architecture, analytics, and BI workflows.
 
 ### Data Processing Logic
-
-Data is processed through the Medallion Architecture using PySpark and Spark SQL.
 ![Azure Data Factory Pipeline](./assets/adfpipeline.png)
+Data is processed through the Medallion Architecture using PySpark and Spark SQL.
 
-
-Bronze Layer
+**Bronze Layer**<br>
 Raw CSV files are ingested from the source and stored in Azure Data Lake Storage without changing the original structure.
 
-Silver Layer
+**Silver Layer**<br>
 PySpark is used to clean and standardize the data by handling null values, removing duplicates, correcting data types, standardizing text fields, validating keys, and checking data quality.
 
-Gold Layer
+**Gold Layer**<br>
 Spark SQL is used to join cleaned datasets and create analytics ready fact and dimension tables such as fact_sales, fact_orders, dim_customer, dim_product, dim_seller, and dim_date.
 
 The final Gold layer is optimized for reporting and analysis in Azure Synapse Analytics and Power BI.
+![Power BI Dashboard](./assets/dashboard.gif)
