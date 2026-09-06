@@ -77,6 +77,8 @@ Its relational structure makes it suitable for demonstrating realistic **data en
 ### Data Processing Logic
 
 Data is processed through the Medallion Architecture using PySpark and Spark SQL.
+![Azure Data Factory Pipeline](./assets/adfpipeline.png)
+
 
 Bronze Layer
 Raw CSV files are ingested from the source and stored in Azure Data Lake Storage without changing the original structure.
